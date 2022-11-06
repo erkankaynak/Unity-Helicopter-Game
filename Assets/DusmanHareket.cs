@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class DusmanHareket : MonoBehaviour
 {
+
+    // Düþman helikopterlerin hareketlerini kodladýðýmýz yer.
+
+
     public float hareketHiz = 10f;
 
     // Update is called once per frame
@@ -11,6 +15,7 @@ public class DusmanHareket : MonoBehaviour
     {
         transform.Translate(Vector3.forward * hareketHiz * Time.deltaTime); 
         
-        // Düþman helikopterinin yönü zaten bize doðru olduðu için back yerine forward yönünde ilerlemesini istiyoruz.
+        // Düþman helikopterinin yönü zaten bize doðru (back yönünde) olduðu
+        // için back yerine forward yönünde ilerlemesini istiyoruz.
     }
 }

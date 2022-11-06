@@ -4,13 +4,25 @@ using UnityEngine;
 
 public class RoketHareket : MonoBehaviour
 {
+    // Helikopterimizden çýkan roketin hareketini ve çarpma kontrollerini
+    // yaptýðýmýz kod.
+
     private Rigidbody rb;
+
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        // Mermiye eklediðimiz RigidBody nesnesini alýp rb deðiþkenine aktarýyoruz.
+        rb = GetComponent<Rigidbody>(); 
+        
+        
+        // RigidBody kullanarak mermiye ileri yönde bir kuvvet uyguluyoruz. 
+        // Bu sayede mermi ileri doðru fýrlayýp gidiyor.
         rb.AddForce(Vector3.forward * 5000f, ForceMode.Force);
 
-        Invoke("Yoket", 2f); // 2 saniye sonra Yoket metodunu çalýþtýr.
+        // 2 saniye sonra Yoket metodunu çalýþtýr.
+        // Bu sayede mermi sonsuza kadar ilerlemeyecek, hiç bir þeye çarpmasa bile
+        // 2 saniye sonra yok olacak.
+        Invoke("Yoket", 2f); 
     }
 
     void Yoket()

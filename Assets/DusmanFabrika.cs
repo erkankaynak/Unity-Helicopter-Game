@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class DusmanFabrika : MonoBehaviour
 {
+    // Düþman helikopterlerin yaratýldýðý bölüm.
+
+
     public GameObject dusmanPrefab;
-    public float sinir = 20f;
+    public float sinir = 20f; // Düþmanlarýn yaratýlacaðý Y ve Z noktalarý belli.
+                             // X ekseni ise rastgele seçilecek. Fakat bunu belirli bir sýnýr
+                             // içerisinde yapmak istiyoruz.
+
     void Start()
     {
-        InvokeRepeating("DusmanYarat", 1f, 1f); // 1 sonra DusmanYarat fonksiyonunu çalýþtýr ve her 1 saniyede tekrar et.
+        // 1 sonra DusmanYarat fonksiyonunu çalýþtýr ve her 1 saniyede tekrar et.
+        InvokeRepeating("DusmanYarat", 1f, 1f); 
     }
 
     void DusmanYarat()

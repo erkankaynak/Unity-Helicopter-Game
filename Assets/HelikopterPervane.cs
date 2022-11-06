@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HelikopterPervane : MonoBehaviour
 {
+    // Helikopter pervanelerinin dönüþ animasyonunu
+
 
     private float donusHizi = 500f;
 
